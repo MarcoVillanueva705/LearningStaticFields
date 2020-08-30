@@ -47,6 +47,7 @@ namespace LearningCollections
                 //add a newStudent to the List <Student> collection
                 students.Add(newStudent);
                 Student.Count++;
+                Console.WriteLine("Student Count is: {0}", Student.Count);
 
                 Console.Write("Add another student? y/n");
 
@@ -69,6 +70,8 @@ namespace LearningCollections
     }
     class Student
     {
+        //Count will be independent of instantiated Student
+        //Count will not rely on each specific Student
         public static int Count;
 
         public string Name;
