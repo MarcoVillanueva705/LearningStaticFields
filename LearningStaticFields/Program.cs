@@ -63,6 +63,7 @@ namespace LearningCollections
                     //Name is obj arg 0 as string(student.Name), and Grade is obj arg 1 as int(student.Grade)
                     //parameters arr[i] lists the data from the loop
                     Console.WriteLine("Name: {0}, Grade: {1}", student.Name, student.Grade);
+                    //workin with namespaces tomorrow;util classes
                 }
             }
         }
