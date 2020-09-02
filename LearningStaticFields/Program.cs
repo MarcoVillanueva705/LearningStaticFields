@@ -22,8 +22,10 @@ namespace LearningCollections
             {
                 var newStudent = new Student();
 
-                Console.Write("Student Name...");
-                newStudent.Name = (Console.ReadLine());
+                //refactored code
+                //Util is the namespace and AskAQuestion the class that holds
+                //the Ask method
+                newStudent.Name = Util.AskAQuestion.Ask("Student Name...");
 
                 Console.Write("Student Grade...");
                 newStudent.Grade = (int.Parse(Console.ReadLine()));
