@@ -27,17 +27,17 @@ namespace LearningCollections
                 //the Ask method
                 newStudent.Name = Util.AskAQuestion.Ask("Student Name...");
 
-                Console.Write("Student Grade...");
+                //Console.Write("Student Grade...");
                 newStudent.Grade = (int.Parse(Util.AskAQuestion.Ask("Student Grade...")));
 
-                Console.Write("Student Birthday...");
+                //Console.Write("Student Birthday...");
                 newStudent.Birthday = (Util.AskAQuestion.Ask("Student Birthday..."));
 
-                Console.Write("Student Address...");
+                //Console.Write("Student Address...");
                 newStudent.Address = (Util.AskAQuestion.Ask("Student Address..."));
 
                 //data type for phone# (and grade) in Class property is int
-                Console.Write("Student Phone...");
+                //Console.Write("Student Phone...");
                 //phone number is set and kept private through 'private' access
                 //specifier and public void method 'SetPhone'
 
