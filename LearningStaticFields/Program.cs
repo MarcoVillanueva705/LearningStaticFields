@@ -28,13 +28,13 @@ namespace LearningCollections
                 newStudent.Name = Util.AskAQuestion.Ask("Student Name...");
 
                 Console.Write("Student Grade...");
-                newStudent.Grade = (int.Parse(Console.ReadLine()));
+                newStudent.Grade = (int.Parse(Util.AskAQuestion.Ask("Student Grade...")));
 
                 Console.Write("Student Birthday...");
-                newStudent.Birthday = (Console.ReadLine());
+                newStudent.Birthday = (Util.AskAQuestion.Ask("Student Birthday..."));
 
                 Console.Write("Student Address...");
-                newStudent.Address = (Console.ReadLine());
+                newStudent.Address = (Util.AskAQuestion.Ask("Student Address..."));
 
                 //data type for phone# (and grade) in Class property is int
                 Console.Write("Student Phone...");
@@ -43,7 +43,7 @@ namespace LearningCollections
 
                 //newStudent.SetPhone(int.Parse(Console.ReadLine()));
                 //using Phone setter
-                newStudent.Phone = (int.Parse(Console.ReadLine()));
+                newStudent.Phone = (int.Parse(Util.AskAQuestion.Ask("Student Phone...")));
 
 
                 //add a newStudent to the List <Student> collection
