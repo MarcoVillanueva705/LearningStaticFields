@@ -31,6 +31,7 @@ namespace LearningCollections
                 //handling exceptions
                 //TryParse requires two params
                 //set var new student as an up param and a second param
+                //also need to specify the 'out' keyword
                 int.TryParse(Util.AskAQuestion.Ask("Student Grade..."), out newStudent.Grade);
 
                 //Console.Write("Student Birthday...");
