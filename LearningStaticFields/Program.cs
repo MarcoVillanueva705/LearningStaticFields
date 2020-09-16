@@ -28,7 +28,10 @@ namespace LearningCollections
                 newStudent.Name = Util.AskAQuestion.Ask("Student Name...");
 
                 //Console.Write("Student Grade...");
-                newStudent.Grade = (int.Parse(Util.AskAQuestion.Ask("Student Grade...")));
+                //handling exceptions
+                //TryParse requires two params
+                //set var new student as an up param and a second param
+                int.TryParse(Util.AskAQuestion.Ask("Student Grade..."), out newStudent.Grade);
 
                 //Console.Write("Student Birthday...");
                 newStudent.Birthday = (Util.AskAQuestion.Ask("Student Birthday..."));
