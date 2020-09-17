@@ -81,7 +81,7 @@ namespace LearningCollections
                 catch (Exception)
                 {
 
-                    throw;
+                    Console.WriteLine("Error, try again please!");
                 }
 
                 
