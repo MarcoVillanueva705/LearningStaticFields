@@ -20,51 +20,71 @@ namespace LearningCollections
 
             while (adding)
             {
-                var newStudent = new Student();
-
-                //refactored code
-                //Util is the namespace and AskAQuestion the class that holds
-                //the Ask method
-                newStudent.Name = Util.AskAQuestion.Ask("Student Name...");
-
-                //Console.Write("Student Grade...");
-
-                //handling exceptions
-                //TryParse requires two params
-                //set 'var new student' as an up param and a second param 'Grade'
-                //also need to specify the 'out' keyword
-                //program will continue, but display the default val of '0'
-                int.TryParse(Util.AskAQuestion.Ask("Student Grade..."), out newStudent.Grade);
-
-                //Console.Write("Student Birthday...");
-                newStudent.Birthday = (Util.AskAQuestion.Ask("Student Birthday..."));
-
-                //Console.Write("Student Address...");
-                newStudent.Address = (Util.AskAQuestion.Ask("Student Address..."));
-
-                //data type for phone# (and grade) in Class property is int
-                //Console.Write("Student Phone...");
-                //phone number is set and kept private through 'private' access
-                //specifier and public void method 'SetPhone'
-
-                //newStudent.SetPhone(int.Parse(Console.ReadLine()));
-                //using Phone setter
-                newStudent.Phone = (int.Parse(Util.AskAQuestion.Ask("Student Phone...")));
-
-
-                //add a newStudent to the List <Student> collection
-                students.Add(newStudent);
-                Student.Count++;
-                Console.WriteLine("Student Count is: {0}", Student.Count);
-
-                Console.Write("Add another student? y/n");
-
-                if (Console.ReadLine() != "y")
+                try
                 {
-                    //break out of while loop because we flip the
-                    //boolean and adding arg to false once "y" typed
-                    adding = false;
+                    var newStudent = new Student();
+
+                    //refactored code
+                    //Util is the namespace and AskAQuestion the class that holds
+                    //the Ask method
+                    newStudent.Name = Util.AskAQuestion.Ask("Student Name...");
+
+                    //Console.Write("Student Grade...");
+
+                    //handling exceptions
+                    //TryParse requires two params
+                    //set 'var new student' as an up param and a second param 'Grade'
+                    //also need to specify the 'out' keyword
+                    //program will continue, but display the default val of '0'
+
+                    //the func also ret boolean if it worked or failed
+                    var result = int.TryParse(Util.AskAQuestion.Ask("Student Grade..."), out newStudent.Grade);
+                    //to see the result and let the user know to try again...
+
+                    if (!result)//exc. point means 'false', w/o is 'true'
+                    {
+                        Console.WriteLine("Please input a number!");
+                    }
+
+
+
+                    //Console.Write("Student Birthday...");
+                    newStudent.Birthday = (Util.AskAQuestion.Ask("Student Birthday..."));
+
+                    //Console.Write("Student Address...");
+                    newStudent.Address = (Util.AskAQuestion.Ask("Student Address..."));
+
+                    //data type for phone# (and grade) in Class property is int
+                    //Console.Write("Student Phone...");
+                    //phone number is set and kept private through 'private' access
+                    //specifier and public void method 'SetPhone'
+
+                    //newStudent.SetPhone(int.Parse(Console.ReadLine()));
+                    //using Phone setter
+                    newStudent.Phone = (int.Parse(Util.AskAQuestion.Ask("Student Phone...")));
+
+
+                    //add a newStudent to the List <Student> collection
+                    students.Add(newStudent);
+                    Student.Count++;
+                    Console.WriteLine("Student Count is: {0}", Student.Count);
+
+                    Console.Write("Add another student? y/n");
+
+                    if (Console.ReadLine() != "y")
+                    {
+                        //break out of while loop because we flip the
+                        //boolean and adding arg to false once "y" typed
+                        adding = false;
+                    }
                 }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                
 
                 foreach (var student in students)
                 {
