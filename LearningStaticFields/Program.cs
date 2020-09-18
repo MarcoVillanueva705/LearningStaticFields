@@ -39,9 +39,14 @@ namespace LearningCollections
 
                     //the func also ret boolean if it worked or failed
 
+                    //this won't crash the app, but will start again from 'try'
                     newStudent.Grade = int.Parse(Util.AskAQuestion.Ask("Student Grade..."));
 
                     //second param is everything after the comma in 'Utils.AskAQuestion...'
+                    //TryParse will just continue; won't crash, but won't start over
+                    //this is because once the exception occurs in TryParse, code goes straight
+                    //to catch;after displaying error message, it goes back to the top of the 'while loop'
+                    //and tries once again to add the student
                     //var result = int.TryParse(Util.AskAQuestion.Ask("Student Grade..."), out newStudent.Grade);
                     //to see the result and let the user know to try again...
 
