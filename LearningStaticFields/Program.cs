@@ -88,6 +88,8 @@ namespace LearningCollections
                         adding = false;
                     }
                 }
+                //very general error message; nothing specific to the input
+                //we are catching ALL or ANY exceptions with our catch
                 catch (Exception)
                 {
 
