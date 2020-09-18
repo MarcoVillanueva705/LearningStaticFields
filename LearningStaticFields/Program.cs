@@ -38,13 +38,18 @@ namespace LearningCollections
                     //program will continue, but display the default val of '0'
 
                     //the func also ret boolean if it worked or failed
-                    var result = int.TryParse(Util.AskAQuestion.Ask("Student Grade..."), out newStudent.Grade);
+
+                    newStudent.Grade = int.Parse(Util.AskAQuestion.Ask("Student Grade..."));
+
+                    //second param is everything after the comma in 'Utils.AskAQuestion...'
+                    //var result = int.TryParse(Util.AskAQuestion.Ask("Student Grade..."), out newStudent.Grade);
                     //to see the result and let the user know to try again...
 
-                    if (!result)//exc. point means 'false', w/o is 'true'
-                    {
-                        Console.WriteLine("Please input a number!");
-                    }
+                    //catch will now display the error
+                    //if (!result)//exc. point means 'false', w/o is 'true'
+                    //{ 
+                    //    Console.WriteLine("Please input a number!");
+                    //}
 
 
 
