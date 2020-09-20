@@ -92,6 +92,7 @@ namespace LearningCollections
                 //unlike the 'catch' all; 'Error, try again 'will always run
                 //unless specific 'catch' declared
                 //has to go before general 'Exception' or it won't run
+                //if input for student grade not a number, this catch will be thrown
                 catch (FormatException)
                 {
                     Console.WriteLine("Value was not a number");
