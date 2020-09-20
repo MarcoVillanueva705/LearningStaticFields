@@ -95,6 +95,13 @@ namespace LearningCollections
 
                     Console.WriteLine("Error, try again please!");
                 }
+                //Format Exception is to catch format errors specifically
+                //unlike the 'catch' all; 'Error, try again 'will always run
+                //unless specific 'catch' declared
+                catch(FormatException)
+                {
+                    Console.WriteLine("Value was not a number");
+                }
 
                 
 
